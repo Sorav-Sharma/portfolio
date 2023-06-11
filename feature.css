@@ -1,0 +1,119 @@
+.feature {
+    text-align: center;
+}
+
+.feature__title {
+    font-size: var(--size-3xl);
+    color: var(--clr-rose);
+}
+
+.feature__subtitle {
+    color: var(--clr-indigo);
+    font-size: var(--size-sm);
+}
+
+.feature__content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+}
+
+.feature__card {
+    /* border: 1px solid var(--clr-indigo); */
+    background-color: var(--clr-slate800);
+    border-radius: 10px;
+    max-width: 30ch;
+    transition: all 0.5s;
+    padding: 1rem 1rem;
+}
+
+
+/* when we dont want the light(white color) to become black when light theme is switched on , we give it whitesmoke instead of var(--clr-light) */
+.card__heading {
+    color: whitesmoke;
+}
+
+.card__para {
+    font-size: var(--size-sm);
+    color: whitesmoke;
+}
+
+.feature__card:hover {
+    background-color: var(--clr-rose);
+    transform: scale(1.025);
+}
+
+.card__icon {
+    color: var(--clr-rose);
+}
+
+.feature__card:hover .card__icon {
+    color: azure;
+}
+
+/*  xs  */
+/* @media (min-width : 475px) {} */
+
+/*  sm  */
+/* @media (min-width : 640px) {} */
+
+/*  md  */
+@media (min-width : 768px) {
+
+    .feature__title {
+        font-size: var(--size-4xl);
+    }
+
+    .feature__subtitle {
+        font-size: var(--size-base);
+    }
+
+    .feature__content {
+        margin-top: 2rem;
+        gap: 5rem;
+    }
+
+    .card__icon {
+        transform: scale(1.5);
+    }
+
+    .card__para {
+        font-size: var(--size-base);
+    }
+
+}
+
+/*  lg  */
+/* @media (min-width : 1024px) {} */
+
+/*  xl  */
+@media (min-width : 1280px) {
+    .feature__title {
+        font-size: var(--size-6xl);
+    }
+
+    .feature__subtitle {
+        font-size: var(--size-lg);
+    }
+
+    .feature__content {
+        margin-top: 3rem;
+        gap: 6rem;
+    }
+
+    .card__icon {
+        transform: scale(2);
+    }
+
+    .card__para {
+        font-size: var(--size-lg);
+    }
+
+}
+
+/*  2xl  */
+/* @media (min-width : 1536px) {} */

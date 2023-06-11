@@ -1,0 +1,315 @@
+.work {
+    text-align: center;
+}
+
+.work__project-title {
+    font-size: var(--size-lg);
+    margin-bottom: 1rem;
+}
+
+/* BELOW IS FOR THE IMAGES EFFECT */
+/* we wrap all image inside a div having class work__img-wrapper */
+.work__img-wrapper {
+    position: relative;
+}
+
+.work__img-wrapper::after {
+    content: '';
+    /* Above is reqd whenever using pseudo classes  */
+    background-color: rgba(79, 70, 229, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* as background color to be removed from the flow of document so it sits on top of image */
+    /* absolute is positioning it relative to the entire document , to make it position it relative to image only , we define position of relative to its closest parent AND AS WE ARE USING AFTER PSEUDO class closest parent is .work__img-wrapper itself */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.4s;
+}
+
+.work__img-wrapper:hover::after {
+    background-color: rgba(79, 70, 229, 0.1);
+}
+
+.work__project:not(:last-child) {
+    margin-bottom: 4rem;
+    /* as we dont want the last project to have This margin below itself , we add the pseudo class  */
+}
+
+.work__project-description1 {
+    font-size: var(--size-sm);
+    color: var(--clr-slate400);
+    margin: 1rem 0;
+}
+
+.work__project-description2 {
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+    margin: 1rem 0;
+}
+
+.work__project-btn {
+    font-size: var(--size-sm);
+}
+
+.work__title {
+    font-size: var(--size-2xl);
+    color: var(--clr-light);
+}
+
+.work__description {
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+    margin: 1rem auto;
+    /* as we gave max-width:60ch , we see on bigger viewport paragraph to be on left side and not in center , to fix this we give left and right margin to auto and not 0 */
+}
+
+.work__project-subtitle {
+    display: none;
+}
+
+/*  xs  */
+@media (min-width : 475px) {
+    .work__title {
+        font-size: var(--size-3xl);
+    }
+
+    .work__description {
+        font-size: var(--size-base);
+        margin: 1.5rem auto;
+    }
+
+    .work__project-title {
+        font-size: var(--size-xl);
+        margin-bottom: 1.5rem;
+    }
+
+    .work__project-description1 {
+        font-size: var(--size-base);
+        margin: 1.5rem 0;
+    }
+
+    .work__project-description2 {
+        font-size: var(--size-base);
+        margin: 1.5rem 0;
+    }
+
+    .work__project-btn {
+        font-size: var(--size-base);
+    }
+
+}
+
+/*  sm  */
+@media (min-width : 640px) {
+    .work__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-template-areas:
+            'image1 content1'
+            'content2 image2'
+            'image3 content3'
+            'content4 image4';
+    }
+
+    .work__image1 {
+        grid-area: image1;
+    }
+
+    .work__image2 {
+        grid-area: image2;
+    }
+
+    .work__image3 {
+        grid-area: image3;
+    }
+
+    .work__image4 {
+        grid-area: image4;
+    }
+
+    .work__content1 {
+        grid-area: content1;
+    }
+
+    .work__content2 {
+        grid-area: content2;
+    }
+
+    .work__content3 {
+        grid-area: content3;
+    }
+
+    .work__content4 {
+        grid-area: content4;
+    }
+
+    .work__project {
+        padding: 0 1rem;
+    }
+
+    .work__project-title {
+        display: none;
+    }
+
+    .work__project-description1 {
+        font-size: var(--size-xs);
+        margin: 1em 0;
+        /* using em as we want margins to be relative to font-size */
+    }
+
+    .work__project-description2 {
+        font-size: var(--size-xs);
+        margin: 1em 0;
+
+    }
+
+    .work__project-btn {
+        font-size: var(--size-xs);
+        margin: 1em 0;
+
+    }
+
+    .work__project:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+
+    .work__project-subtitle {
+        display: block;
+        font-size: var(--size-base);
+    }
+
+}
+
+/*  md  */
+@media (min-width : 768px) {
+    .work__description {
+        font-size: var(--size-lg);
+        margin: 1.5rem auto;
+    }
+    .work__project-description1 {
+        font-size: var(--size-sm);
+        margin: 1.5em 0;
+    }
+
+    .work__project-description2 {
+        font-size: var(--size-sm);
+        margin: 1.5em 0;
+
+    }
+
+    .work__project-btn {
+        font-size: var(--size-sm);
+        margin: 0.5em 0;
+    }
+
+    .work__project-subtitle {
+        font-size: var(--size-lg);
+    }
+
+}
+
+/*  lg  */
+@media (min-width : 1024px) {
+    .work__title {
+        font-size: var(--size-4xl);
+    }
+
+    .work__description {
+        font-size: var(--size-lg);
+    }
+
+    .work__project-description1 {
+        font-size: var(--size-base);
+        margin: 1.5em 0;
+    }
+
+    .work__project-description2 {
+        font-size: var(--size-base);
+        margin: 1.5em 0;
+
+    }
+
+    .work__project-btn {
+        font-size: var(--size-base);
+        margin: 1.5em 0;
+    }
+
+    .work__project-subtitle {
+        font-size: var(--size-xl);
+    }
+
+}
+
+/*  xl  */
+@media (min-width : 1280px) {
+    .work__title {
+        font-size: var(--size-5xl);
+    }
+
+    .work__description {
+        font-size: var(--size-xl);
+        margin: 2rem auto;
+    }
+
+    .work__project-description1 {
+        font-size: var(--size-lg);
+        margin: 1.5em 0;
+    }
+
+    .work__project-description2 {
+        font-size: var(--size-lg);
+        margin: 1.5em 0;
+
+    }
+
+    .work__project-btn {
+        font-size: var(--size-lg);
+        margin: 1.5em 0;
+    }
+
+    .work__project-subtitle {
+        font-size: var(--size-2xl);
+    }
+
+    .work__container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/*  2xl  */
+@media (min-width : 1536px) {
+    .work__description {
+        font-size: var(--size-2xl);
+        margin: 3rem auto;
+    }
+
+    .work__project-description1 {
+        font-size: var(--size-xl);
+        margin: 1.5em 0;
+    }
+
+    .work__project-description2 {
+        font-size: var(--size-xl);
+        margin: 1.5em 0;
+
+    }
+
+    .work__project-btn {
+        font-size: var(--size-xl);
+        margin: 2em 0;
+    }
+
+    .work__project-subtitle {
+        font-size: var(--size-4xl);
+    }
+
+    .work__container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

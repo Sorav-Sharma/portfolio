@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PORTFOLIO </title>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/hero.css">
+    <link rel="stylesheet" href="styles/components/about.css">
+    <link rel="stylesheet" href="styles/components/feature.css">
+    <link rel="stylesheet" href="styles/components/work.css">
+    <link rel="stylesheet" href="styles/components/contact.css">
+    <link rel="stylesheet" href="styles/components/footer.css">
+    <link rel="stylesheet" href="styles/components/mobile-nav.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="shortcut icon" href="images/favi_img.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/util.css">
+</head>
+<!-- To add lazy loading , just add class of lazy to all media(images\videos) : its better for performance -->
+
+<body>
+    <header class="header container">
+        <nav>
+            <ul class="header__menu">
+                <li><a class="header__links" href="#Home">Home</a></li>
+                <li><a class="header__links" href="#about"> About</a></li>
+                <li><a class="header__links" href="#feature">Featured</a></li>
+                <li><a class="header__links" href="#projects">Projects</a></li>
+                <li><a class="header__links" href="#contact">Contact</a></li>
+                <li class="header__line"></li>
+                <li>
+                    <button id="theme-toggle" class="header__sun">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                        </svg>
+
+                    </button>
+                </li>
+                <li>
+                    <!-- <a href="#Resume" class="header__resume btn" >Resume</a> -->
+                    <a href="#Resume">
+                        <button class="btn header__resume">
+                            Resume
+                        </button>
+                    </a>
+                    <!-- <button class="header__resume btn">Resume -->
+                    <!-- </button> -->
+
+            </ul>
+            <!-- ICONS : heroicons.com -->
+            <button class="header__bars">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+
+            </button>
+        </nav>
+    </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <nav>
+            <ul class="mobile-nav__menu">
+                <li>
+                    <a class="mobile-nav__link" href="#Home">Home</a>
+                </li>
+                <li>
+                    <a class="mobile-nav__link" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="mobile-nav__link" href="#feature">Featured</a>
+                </li>
+                <li>
+                    <a class="mobile-nav__link" href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a class="mobile-nav__link" href="#contact">Contact</a>
+                </li>
+                <li class="mobile-nav__link-line">
+
+                </li>
+                <li>
+                    <button id="theme-toggle" class="mobile-nav__sun">
+                        <!-- This sun icon has different class than the one we used above , but they do same function , so to avoid writing double JS , we give them same ID -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <a href="#resume" class="mobile-nav__btn btn">Resume</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- End of Mobile Navigation -->
+
+    <main>
+        <section id="home" class="hero container">
+            <img class="hero__img" src="images/profile_up.jpg" alt="Profile">
+            <h2 class="hero__subtitle">Hi , I am <strong> Sorav Sharma</strong> 👋 </h2>
+            <h1 class="hero__title">FRONT-END<br>WEB DEVELOPER.</h1>
+            <p class="hero__description">
+                I am an engineering student, I have a strong passion for coding in general.
+                I enjoy delving into <strong> data structures, algorithms, and competitive coding </strong> using C++.
+                Additionally, I also possess the skills for <strong> web development </strong>.
+            </p>
+            <a class="hero__btn btn" href="#contact">Reach Out</a>
+        </section>
+        <section id="about" class=" about container section">
+            <!-- now we need two containers (display is flex): left for actual about and right for the image -->
+            <div class="about__content">
+                <h2 class="about__title">About</h2>
+                <p class="about__description">Hey there! I am Sorav Sharma , an engineering student pursuing Btech in
+                    Computer Science from
+                    <strong> NIT Jalandhar </strong>. I was raised and brought up in Amritsar,Punjab.
+                </p>
+                <p class="about__description"> I am a tech enthusiast who loves problem solving. I have great interest
+                    in <strong> competitive
+                        coding </strong> and
+                    <strong> web development </strong>.
+                </p>
+                <p class="about__description"> Aside from that , I share interest in DBMS and Machine Learning</p>
+                <hr class="about__hr">
+                <h3 class="about__subtitle">Skills</h3>
+                <div class="about__ul-container">
+                    <ul class="about__ul">
+                        <li class="about__list">HTML</li>
+                        <li class="about__list">CSS</li>
+                        <li class="about__list"> JAVASCRIPT</li>
+                        <li class="about__list">BOOTSTRAP</li>
+
+                    </ul>
+                    <ul class="about__ul">
+                        <li class="about__list">C/C++</li>
+                        <li class="about__list">PYTHON</li>
+                        <li class="about__list">SQL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about__img-wrapper">
+                <!-- <img loading="lazy" class="about__img" src="images/profile_below.jpg" alt="prof2"> -->
+                <img loading="lazy" class="about__img" src="images/profile_below.webp" alt="prof2">
+            </div>
+        </section>
+        <section id="feature" class="feature container section">
+            <h2 class=" feature__title">My Interests</h2>
+            <h5 class="feature__subtitle">Things I Love</h5>
+            <div class="feature__content">
+                <div class="feature__card">
+                    <i class='card__icon fa fa-paint-brush '></i>
+                    <h3 class="card__heading">Web Designing</h3>
+                    <p class="card__para">I love designing websites and upgrading myself by learning new skills and
+                        implementing them</p>
+                </div>
+                <div class="feature__card">
+                    <!-- <i class='fa fa-paint-brush card__icon'></i> -->
+                    <i class='card__icon fa fa-free-code-camp'></i>
+                    <h3 class="card__heading">Learning new Things</h3>
+                    <p class="card__para">I believe in constantly updating myself by learning something new with
+                        practical Implementations.</p>
+                </div>
+                <div class="feature__card">
+                    <i class='card__icon fa fa-code'></i>
+                    <h3 class="card__heading">Competitive Coding</h3>
+                    <p class="card__para">In my free time I like to do some problem solving on various Competetive
+                        Coding platforms.</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="projects" class="work container section">
+            <!-- separated into : title description and projects -->
+            <h2 class="work__title">Projects </h2>
+            <p class="work__description">
+                I really enjoy being involved in group projects and working together to create amazing things. I have
+                completed a few projects of my own, and here are some examples. </p>
+            <!-- Projects part is simply vertical in smaller viewports but a 2d zigzag grid on larger viewports , its complicated  -->
+
+            <div class="work__container">
+                <!-- project 1  -->
+                <h3 class="work__project-title">Bank Management</h3>
+                <div class="work__img-wrapper work__image1">
+                    <img loading="lazy" src="./images/Bank.png" alt="Bank Project">
+                </div>
+                <div class="work__project work__content1">
+                    <h3 class="work__project-subtitle">
+                        Bank Management
+                    </h3>
+                    <p class="work__project-description1">
+                        This project was an individual endeavor focused on implementing object-oriented programming
+                        principles using C++. I developed a Bank Management System.
+                    </p>
+                    <p class="work__project-description2">
+                        It encompasses crucial information about customers, accounts, employees, and date/time records.
+                        The
+                        system features a user-friendly interface to facilitate ease of use. To store the necessary data
+                        efficiently, I utilized (.DAT) files for storing employee and customer information. You can find
+                        the
+                        project by following the provided link.
+                    </p>
+                    <a href="https://github.com/Sorav-Sharma/Bank-Management-System" target="_blank">
+                        <button class="btn work__project-btn">
+                            Github
+                        </button>
+                    </a>
+                </div>
+
+                <!-- project 2  -->
+                <h3 class="work__project-title">PORTFOLIO</h3>
+                <div class="work__img-wrapper work__image2">
+                    <img loading="lazy" src="./images/portfolio_image.png" alt="PORTFOLIO">
+                </div>
+                <div class="work__project work__content2">
+                    <h3 class="work__project-subtitle">
+                        PORTFOLIO
+                    </h3>
+                    <p class="work__project-description1">
+                        This project serves as a testament to my proficiency in front-end development, bolstered by
+                        valuable
+                        online resources. It is solely constructed using HTML, CSS, and JavaScript.
+                    </p>
+                    <p class="work__project-description2">
+                        It is a completely responsive website which can work in light mode or dark mode based on user
+                        preferences . It also stores the user preferences in local storage. Pictures included are from
+                        the
+                        time
+                        of development phase. Below is the Github link which leads you to the code of this website.
+                    </p>
+                    <a href="#">
+                        <button class="btn work__project-btn">
+                            Github
+                        </button>
+                    </a>
+
+                </div>
+
+                <!-- project 3  -->
+                <h3 class="work__project-title">BB Calculator</h3>
+                <div class="work__img-wrapper work__image3">
+                    <img loading="lazy" src="./images/calculator.png" alt="Calculator">
+                </div>
+                <div class="work__project work__content3">
+                    <h3 class="work__project-subtitle">
+                        BB Calculator
+                    </h3>
+                    <p class="work__project-description1">
+                        This was a group project I made in 2nd semester using C language. Its a scietific calculator
+                        with a
+                        very
+                        user friendly interface.
+                    </p>
+                    <p class="work__project-description2">
+                        It is able to store history of calculations. It is super-versatile and can work on matrices ,
+                        geometry ,
+                        conversions , basic arithmatic etc. It does have a very long code and does not use any inbuilt
+                        libraries.
+                    </p>
+                    <a href="#">
+                        <button class="btn work__project-btn">
+                            Github
+                        </button>
+                    </a>
+                </div>
+
+                <!-- project 4  -->
+                <h3 class="work__project-title">Flipkart Clone</h3>
+                <div class="work__img-wrapper work__image4">
+                    <img loading="lazy" src="./images/flipkart.png" alt="Flipkart">
+                </div>
+                <div class="work__project work__content4">
+                    <h3 class="work__project-subtitle">
+                        Flipkart Clone
+                    </h3>
+                    <p class="work__project-description1">
+                        I made this project in the early phase of learning front end development. It is completely
+                        responsive.
+                    </p>
+                    <p class="work__project-description2">
+                        It surely needs a lot of improvements. But at the time of building it it was a big deal for me.
+                    </p>
+                    <a href="https://github.com/Sorav-Sharma/flipkart-clone" target="_blank">
+                        <button class="btn work__project-btn">
+                            Github
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="container section contact">
+            <h2 class="contact__heading">Contact Me</h2>
+            <i class='fa fa-handshake-o contact__icon'></i>
+            <div class="contact__infoQuote">
+                <div class="contact__info">
+                    <div class="contact__info-block">
+                        <div class="contact__info-block-icon">
+                            <i class='fa fa-user-circle'></i>
+                        </div>
+                        <div class="contact__info-block-details">
+                            <h4 class="contact__info-block-details-heading"> Name</h4>
+                            <p class="contact__info-block-details-para">Sorav Sharma</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-block">
+                        <div class="contact__info-block-icon">
+                            <i class='fa fa-address-card-o'></i>
+                        </div>
+                        <div class="contact__info-block-details">
+                            <h4 class="contact__info-block-details-heading">Address</h4>
+                            <p class="contact__info-block-details-para"># 57, Rishi Vihar , Majitha Road ,Amritsar ,
+                                Punjab</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-block">
+                        <div class="contact__info-block-icon">
+                            <i class='fa fa-google'></i>
+                        </div>
+                        <div class="contact__info-block-details">
+                            <h4 class="contact__info-block-details-heading"> Email</h4>
+                            <p class="contact__info-block-details-para"><a
+                                    href="mailto:soravsharma@gmail.com">soravsharma@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__quote">
+                    <h4 class="contact__quote-heading">My Favorite Quote</h4>
+                    <p class="contact__quote-para">"Every journey begins with a single step. Have the courage to take
+                        that step, and you'll be amazed at how far you can go."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer section">
+        <div class="footer__handles">
+            <a target="_blank" href="   https://www.instagram.com/sorav9939/">
+                <i class='fa fa-instagram footer__icon'></i>
+            </a>
+            <a href="https://twitter.com/Soravsh74922189" target="_blank">
+                <i class='fa fa-twitter footer__icon'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sorav-sharma-812a34227/" target="_blank">
+
+                <i class='fa fa-linkedin-square footer__icon'></i>
+            </a>
+            <a target="_blank" href="https://github.com/Sorav-Sharma">
+                <i class='fa fa-github footer__icon'></i>
+            </a>
+        </div>
+        <div class="footer__para">
+            <p>Created by : <strong>Sorav Sharma</strong></p>
+        </div>
+    </footer>
+    <script src="src/utils/mobile-nav.js"></script>
+    <script src="src/utils/dark-mode.js"></script>
+    <!-- <script src="src/main.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+/*  xs  */
+/* @media (min-width : 475px) {} */
+
+/*  sm  */
+/* @media (min-width : 640px) {} */
+
+/*  md  */
+/* @media (min-width : 768px) {} */
+
+/*  lg  */
+/* @media (min-width : 1024px) {} */
+
+/*  xl  */
+/* @media (min-width : 1280px) {} */
+
+/*  2xl  */
+/* @media (min-width : 1536px) {} */
+
+
+/* Genrally contains CSS of classes */
+
+/* almost all buttons are going to similar and have class btn*/
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    color: rgb(239, 234, 234);
+    background-color: var(--clr-rose);
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    /* 
+        The horizontal offset of the shadow, positive means the shadow will be on the right of the box, a negative offset will put the shadow on the left of the box.
+        The vertical offset of the shadow, a negative one means the box-shadow will be      above the box, a positive one means the shadow will be below the box.
+        The blur radius (optional), if set to 0 the shadow will be sharp, the higher the        number, the more blurred it will be.
+        The spread radius (optional), positive values increase the size of the shadow,      negative values decrease the size. Default is 0 (the shadow is same size as blur).
+        Color
+    */
+    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5), 0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px var(--clr-rose);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 18px rgba(225, 29, 72, 0.25), 0 10px 10px rgba(225, 29, 72, 0.22), 0 0 120px -10px var(--clr-rose);
+}
+
+/* CONTAINER CLASS : VERY IMPORTANT */
+/* 
+    container utility class is important bcuz :
+    all sections are properly aligned(to reduce media queries) 
+    used to make responsive easily (shrink) when container touched  
+*/
+
+.container {
+    width: 100%;
+    /* generally we should not use % much as say if someone has extra wide monitor then out webpage will just stretch out , but as its mobile first we are using it for now */
+    margin-left: auto;
+    margin-right: auto;
+    /* ABove margin works only when we set some width , in our case its set always according to matching media query  */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    /* we are not setting top bottom margin here , as utils is of highest priority , it will not let us give margin to other elements having class container  */
+
+    /* NOTE : 
+        Properties like width (as mentioned earlier), margin, padding, and border are not inherited properties.
+        INHERITED : color and font-family on an element, every element inside it will also be styled with that color and font
+    */
+
+    /* border: 1px solid red; */
+
+}
+
+/* after each container , we have some gap , following utility class does that */
+.section {
+    margin-top: 5rem;
+    /* for larger screen , for higher px media queries it should be even more so there */
+}
+
+
+/* following is called MOBILE FIRST ARCHITECTURE */
+/* six media queries for different screen sizes */
+/*  xs  */
+@media (min-width : 475px) {
+
+    /* min : for 475 and above , following apply */
+    .container {
+        /* This is what makes the shrink happen */
+        max-width: 475px;
+    }
+}
+
+/*  sm  */
+@media (min-width : 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+/*  md  */
+@media (min-width : 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/*  lg  */
+@media (min-width : 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    .section {
+        margin-top: 10rem;
+    }
+}
+
+/*  xl  */
+@media (min-width : 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/*  2xl  */
+@media (min-width : 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+/* We will be using these queries for different sections , so copy it on top for faster copy/pasting */
